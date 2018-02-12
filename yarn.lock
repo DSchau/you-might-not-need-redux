@@ -22,23 +22,23 @@
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
 
 "@types/react-router-dom@^4.2.2":
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.2.3.tgz#06e0b67ff536adc0681dffdbe592ae91fb85887d"
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.2.4.tgz#02c43274129ffe0ac42b348f7c8c4a9a4e127c8a"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
     "@types/react-router" "*"
 
 "@types/react-router@*":
-  version "4.0.21"
-  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.21.tgz#d6c7ea3b45dba02eb8f869629f3b7d7b6e9a7938"
+  version "4.0.22"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.22.tgz#2b97336eddfdf5886973539539b8ce7037cf629b"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
 
 "@types/react@*":
-  version "16.0.36"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.36.tgz#ceb5639013bdb92a94147883052e69bb2c22c69b"
+  version "16.0.37"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.37.tgz#1f62a33034d558ecc7955b3d5bc5270aefa33e11"
 
 "@zeit/check-updates@1.0.5":
   version "1.0.5"
@@ -3744,8 +3744,8 @@ gatsby-transformer-yaml@~1.5.14:
     unist-util-select "^1.5.0"
 
 gatsby@^1.9.158:
-  version "1.9.192"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.192.tgz#1a7fe60735b618681c616fc375f5e019a1e98c31"
+  version "1.9.193"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.193.tgz#95cfb31b834dac124a0b2922948ea54c983f8682"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
