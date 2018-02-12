@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import styled from 'react-emotion';
 import facepaint from 'facepaint'
 
@@ -70,11 +71,14 @@ const TweetsWithLinks = ({ list, title }) => {
 
 export default function Index({ data }) {
   const {
+    allSitesYaml,
     tweetsFor: { edges: tweetsFor },
     tweetsAgainst: { edges: tweetsAgainst }
   } = data;
+  const screenshot = allSitesYaml.edges[0].node.childScreenshot.screenshotFile.childImageSharp.resize.src;
   return (
     <React.Fragment>
+      <Helmet />
       <Container>
         <Title>
           <TweetsWithLinks list={tweetsAgainst} title="You might not need Redux" />
@@ -101,6 +105,22 @@ export const pageQuery = graphql`
       edges {
         node {
           url
+        }
+      }
+    }
+
+    allSitesYaml {
+      edges {
+        node {
+          childScreenshot {
+            screenshotFile {
+              childImageSharp {
+                resize(height: 1200, width: 1200) {
+                  src
+                }
+              }
+            }
+          }
         }
       }
     }

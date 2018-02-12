@@ -8,7 +8,10 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
     'gatsby-plugin-emotion',
+    'gatsby-plugin-sharp',
     'gatsby-transformer-yaml',
+    'gatsby-transformer-screenshot',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
