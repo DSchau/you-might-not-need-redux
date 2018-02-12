@@ -4,10 +4,25 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "emotion": "~9.0.0",
+    "emotion-server": "~9.0.0",
+    "facepaint": "~1.2.0",
     "gatsby": "^1.9.158",
     "gatsby-link": "^1.6.34",
+    "gatsby-plugin-emotion": "~1.1.11",
     "gatsby-plugin-react-helmet": "^2.0.3",
-    "react-helmet": "^5.2.0"
+    "gatsby-plugin-react-next": "~1.0.8",
+    "gatsby-plugin-typography": "~1.7.13",
+    "gatsby-source-filesystem": "~1.5.18",
+    "gatsby-transformer-yaml": "~1.5.14",
+    "react": "~16.2.0",
+    "react-dom": "~16.2.0",
+    "react-emotion": "~9.0.0",
+    "react-fittext": "~1.0.0",
+    "react-helmet": "^5.2.0",
+    "react-scale-text": "~1.2.2",
+    "react-textfit": "~1.1.0",
+    "typography": "~0.16.6"
   },
   "keywords": [
     "gatsby"
@@ -17,7 +32,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\"",
+    "start": "npm run develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
