@@ -37,6 +37,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "bl": "~1.2.1",
     "prettier": "^1.10.2"
   }
 }
