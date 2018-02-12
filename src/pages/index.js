@@ -114,7 +114,7 @@ export const pageQuery = graphql`
           childScreenshot {
             screenshotFile {
               childImageSharp {
-                resize(height: 1200, width: 1200) {
+                resize(width: 1200) {
                   src
                 }
               }
