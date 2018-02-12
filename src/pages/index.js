@@ -11,10 +11,6 @@ const mq = facepaint([
   '@media(min-width: 1024px)'
 ]);
 
-console.log(mq({
-    fontSize: ['1.5rem', '2rem', '3rem', '4rem']
-  }));
-
 const Container = styled.main({
   flex: '1 1 auto',
   position: 'relative',
