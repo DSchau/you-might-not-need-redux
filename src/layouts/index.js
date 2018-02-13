@@ -11,21 +11,45 @@ const Container = styled.div({
   height: '100%'
 });
 
-const TemplateWrapper = ({ children }) => (
-  <Container>
-    <Helmet
-      title="You Might Not Need Redux"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    {children()}
-  </Container>
-);
+export default function TemplateWrapper({ children, data }) {
+  const { meta } = data;
+  const { title, description, author, authorUrl, published, twitter } = meta;
+  return (
+    <Container>
+      <Helmet>
+        <title>{title}</title>
+        <link rel="author" href={authorUrl} />
+        <meta name="description" content={description} />
+        <meta name="og:description" content={description} />
+        <meta name="twitter:description" content={description} />
+        <meta name="og:title" content={title} />
+        <meta name="og:type" content="article" />
+        <meta name="author" content={author} />
+        <meta name="article:author" content={author} />
+        <meta name="article:published_time" content={published} />
+        <meta name="twitter:creator" content={twitter} />
+        <meta name="twitter:label1" content="Reading time" />
+        <meta name="twitter:data1" content={`0 min read`} />
+      </Helmet>
+      {children()}
+    </Container>
+  );
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
+  data: PropTypes.object
 };
 
-export default TemplateWrapper;
+export const pageQuery = graphql`
+  query LayoutQuery {
+    meta:metaYaml {
+      title
+      description
+      author
+      authorUrl
+      twitter
+      published
+    }
+  }
+`;

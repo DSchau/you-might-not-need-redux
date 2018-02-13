@@ -71,10 +71,13 @@ export default function Index({ data }) {
     tweetsFor: { edges: tweetsFor },
     tweetsAgainst: { edges: tweetsAgainst }
   } = data;
-  const screenshot = allSitesYaml.edges[0].node.childScreenshot.screenshotFile.childImageSharp.resize.src;
+  const screenshot = allSitesYaml.edges[0].node.childScreenshot.screenshotFile.childImageSharp.original.src;
   return (
     <React.Fragment>
-      <Helmet />
+      <Helmet>
+        <meta name="og:image" content={screenshot} />
+        <meta name="twitter:image" content={screenshot} />
+      </Helmet>
       <Container>
         <Title>
           <TweetsWithLinks list={tweetsAgainst} title="You might not need Redux" />
@@ -111,7 +114,7 @@ export const pageQuery = graphql`
           childScreenshot {
             screenshotFile {
               childImageSharp {
-                resize(height: 1200, width: 1200) {
+                original {
                   src
                 }
               }
