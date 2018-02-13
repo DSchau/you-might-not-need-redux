@@ -71,7 +71,7 @@ export default function Index({ data }) {
     tweetsFor: { edges: tweetsFor },
     tweetsAgainst: { edges: tweetsAgainst }
   } = data;
-  const screenshot = allSitesYaml.edges[0].node.childScreenshot.screenshotFile.childImageSharp.resize.src;
+  const screenshot = allSitesYaml.edges[0].node.childScreenshot.screenshotFile.childImageSharp.original.src;
   return (
     <React.Fragment>
       <Helmet>
@@ -114,7 +114,7 @@ export const pageQuery = graphql`
           childScreenshot {
             screenshotFile {
               childImageSharp {
-                resize(width: 1200) {
+                original {
                   src
                 }
               }
