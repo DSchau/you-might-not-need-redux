@@ -23,6 +23,13 @@ module.exports = {
       options: {
         path: path.join(__dirname, 'content')
       }
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-114065864-1',
+        anonymize: true
+      }
     }
   ],
 };
